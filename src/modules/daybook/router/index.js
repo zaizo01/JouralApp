@@ -16,6 +16,11 @@ export default {
       name: "entry",
       component: () =>
         import(/* webpackChunkName: "entry" */ "../views/EntryView.vue"),
+      props: (route) => {
+        return {
+          id: route.params.id,
+        };
+      },
     },
   ],
 };
